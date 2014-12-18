@@ -12,15 +12,10 @@ class Board
   end
 
   def check_element?(x, y)
-    if @element[x][y] == true
-      return true
-    else
-      return false
-    end
+    @element[x][y] == true ? true : false
   end
 
   def print_ship
-    puts
     @element.each do |x|
       x.each do |y|
         if y == nil
@@ -36,15 +31,10 @@ class Board
   end
 
   def hit(x, y)
-    if @element[x][y] == true
-      @element[x][y] = false
-    else
-      @element[x][y] = 0
-    end
+    @element[x][y] == true ? @element[x][y] = false : @element[x][y] = 0
   end
 
   def print_track
-    puts
     @element.each do |x|
       x.each do |y|
         if y == nil
