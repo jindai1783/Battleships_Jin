@@ -1,1 +1,3 @@
 #Battleship#
+
+ruby run.rb
